@@ -1,0 +1,90 @@
+{% extends 'commun.html' %}
+{% block title %}{{ block.super }} - Détails de l'entreprise{% endblock %}
+
+<!-- Block Header - DEBUT -->
+{% block header %}
+<div class="page-header">
+    <h1>Détails des données de l'entreprises</h1>
+</div>
+{% endblock %}
+<!-- Block Header - FIN -->
+
+<!-- Block Corps - DEBUT -->
+{% block corps %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post" id="formEditionEntreprise">{% csrf_token %}
+                    <fieldset>
+                        <legend class="text-center header">Informations</legend>
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Nom</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="nom" name="nom" type="text" value="{{ detailEntreprise.nom }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                         <label class="col-md-3 col-md-offset-1">Adresse</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="adresse" name="adresse" type="text" value="{{ detailEntreprise.adresse }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Code Postal</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="codePostal" name="codePostal" type="text" value="{{ detailEntreprise.codePostal }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Ville</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="ville" name="ville" type="text" value="{{ detailEntreprise.ville }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Pays</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="pays" name="pays" type="text" value="{{ detailEntreprise.pays }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Téléphone</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="telephone" name="telephone" type="text" value="{{ detailEntreprise.telephone }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Latitude</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="latitude" name="latitude" type="text" value="{{ detailEntreprise.latitude }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Longitude</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="longitude" name="longitude" type="text" value="{{ detailEntreprise.longitude }}" class="form-control center" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <a href="{% url 'entreprises:modifierEntreprise' entreprise_id=detailEntreprise.id %}" class="btn btn-warning btn-large">Editer</a>
+                                <a href="{% url 'entreprises:delete' entreprise_id=detailEntreprise.id %}" class="btn btn-danger btn-large">Supprimer</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+{% endblock %}
+<!-- Block Corps - FIN -->
+
+<!-- Block Maps - DEBUT -->
+{% block maps %}{% include 'maps.html' %}{% endblock %}
+<!-- Block Maps - FIN -->

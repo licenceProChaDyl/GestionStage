@@ -1,0 +1,19 @@
+{% extends 'commun.html' %}
+{% block title %}{{ block.super }} | Entreprises{% endblock %}
+
+<!-- Block Header - DEBUT -->
+{% block header %}
+<div class="page-header">
+    <h1>Gestion des données de l'entreprise</h1>
+</div>
+{% endblock %}
+<!-- Block Header - FIN -->
+
+<!-- Block Corps - DEBUT -->
+{% block corps %}
+<div class="alert alert-success" role="alert">
+  	<span>{{ message }}</span>
+  	<br> <br><span class="glyphicon glyphicon-arrow-left"></span> <a href="{% url 'entreprises:accueil'%}" class="alert-link">Retourner sur la liste des entreprises</a>
+</div>
+{% endblock %}
+<!-- Block Corps - FIN -->

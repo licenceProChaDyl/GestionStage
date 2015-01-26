@@ -1,0 +1,47 @@
+{% load staticfiles %}
+{% block maps %}
+{% block js %}
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="{% static 'js/afficherCarte.js' %}"></script>
+{% endblock %}
+	<div class="col-md-6">
+	<div>
+		<div class="panel panel-default">
+			<div class="text-center header">Ou la trouver ?</div>
+			<div id="map1" class="map"></div>
+		</div>
+	</div>
+	</div>
+	<div class="cacher">
+		<p>Test</p>
+		<p class="row">
+			<span class="lat">{{ detailEntreprise.latitude }}</span>
+		</p>
+		<p class="row">
+			<span class="lon">{{ detailEntreprise.longitude }}</span>
+		</p>
+	</div>
+
+
+		<!-- Css freestyle pour l'instant -->
+		<style>
+.map {
+	min-width: 220px;
+	min-height: 470px;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	background-color: #F5F5F5;
+	color: #36A0FF;
+	height: 70px;
+	font-size: 27px;
+	padding: 10px;
+}
+
+.cacher {
+	visibility: hidden;
+}
+</style>
+		{% endblock %}

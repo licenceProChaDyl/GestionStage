@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//entreprises/templates/entreprises/ajouterEntreprise.html=UTF-8
+encoding//entreprises/templates/entreprises/detailsEntreprises.html=UTF-8
+encoding//entreprises/templates/entreprises/erreur.html=UTF-8
+encoding//entreprises/templates/entreprises/index.html=UTF-8
+encoding//entreprises/templates/entreprises/modifierEntreprise.html=UTF-8
+encoding//entreprises/templates/entreprises/success.html=UTF-8
+encoding//entreprises/views.py=UTF-8
+encoding//templates/pagination.html=UTF-8

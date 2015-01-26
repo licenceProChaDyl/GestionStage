@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Gestion de stage{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  	<!-- CSS bootsrap -->
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" />
+    
+    <!-- Surcharge all CSS  -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    
+    <!-- CSS font & titres -->
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.min.css" />
+    
+    <!-- CSS pour les tables -->
+	<link rel="stylesheet" type="text/css" href="/static/css/shieldui-all.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/all.min.css" />
+    
+    <!-- CSS pour la maps -->
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!-- Block CONTAINER - DEBUT -->
+<div class="container">
+
+<!-- Block NAV - DEBUT -->
+<div class="container" style="margin-top: 50px; margin-bottom: 50px">
+    <div class="row">
+        <div class="row step center">
+            <div class="col-md-2 col-md-offset-4" onclick="location.href='{% url 'entreprises:accueil'%}'">
+               	<span class="fa fa-list"></span>
+               	<p>Liste des entreprises</p>
+         	</div> 
+           <div class="col-md-2" onclick="location.href='/entreprises/ajouterEntreprise'">
+                <span class="fa fa-plus"></span>
+                 <p>Ajouter une entreprise</p>
+           </div>
+        </div>
+    </div>
+</div>
+<!-- Block NAV - FIN -->
+
+<!-- JS freestyle pour l'instant -->
+<script type="text/javascript">
+$(function () {
+	$(".col-md-2").click(function (e) {
+		e.preventDefault();
+		$(".col-md-2").addClass("activestep").not(this).removeClass("activestep");
+	});
+});
+</script>
+
+{% block header %}{% endblock %}	
+{% block corps %}{% endblock %}	
+{% block maps %}{% endblock %}
+
+</div>
+<!-- Block CONTAINER - FIN -->
+</body>
+</html>

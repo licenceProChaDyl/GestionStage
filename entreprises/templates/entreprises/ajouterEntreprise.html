@@ -1,0 +1,91 @@
+{% extends 'commun.html' %}
+{% block title %}{{ block.super }} - Ajouter une entreprise{% endblock %}
+
+<!-- Block Header - DEBUT -->
+{% block header %}
+<div class="page-header">
+    <h1>Ajouter une entreprise</h1>
+</div>
+{% endblock %}
+<!-- Block Header - FIN -->
+
+<!-- Block Corps - DEBUT -->
+{% block corps %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post" id="formEditionEntreprise">{% csrf_token %}
+                    <fieldset>
+                        <legend class="text-center header">Informations</legend>
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Nom</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="nom" name="nom" type="text" class="form-control center">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                         <label class="col-md-3 col-md-offset-1">Adresse</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="adresse" name="adresse" type="text" class="form-control center">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Code Postal</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="codePostal" name="codePostal" type="text" class="form-control center">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Ville</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="ville" name="ville" type="text" class="form-control center">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Pays</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="pays" name="pays" type="text" class="form-control center">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Téléphone</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="telephone" name="telephone" type="text" class="form-control center">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Latitude</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="latitude" name="latitude" type="text" class="form-control center">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        <label class="col-md-3 col-md-offset-1">Longitude</label>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="longitude" name="longitude" type="text" class="form-control center">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                            	<input class="btn btn-primary" type="submit" value="Envoyer" id="inputSubmit" />
+                            	<button type="reset" class="btn btn-warning btn-large"><span class="glyphicon glyphicon-ban-circle"></span> Effacer</button>                 
+                             </div>
+                        </div>
+                    </fieldset>
+                </form>  
+            </div>
+        </div>
+{% endblock %}
+<!-- Block Corps - FIN -->
+
+<!-- Block Maps - DEBUT -->
+{% block maps %}{% include 'maps.html' %}{% endblock %}
+<!-- Block Maps - FIN -->
