@@ -3,14 +3,27 @@
 {% block js %}
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script type="text/javascript" src="{% static 'js/afficherCarte.js' %}"></script>
+	
 {% endblock %}
 	<div class="col-md-6">
-	<div>
-		<div class="panel panel-default">
-			<div class="text-center header">Ou la trouver ?</div>
-			<div id="map1" class="map"></div>
-		</div>
-	</div>
+	<div class="panel panel-default">
+		<div class="text-center header">Ou la trouver ?</div>
+		<!-- <b>Mode de voyage : </b>
+    	<select id="mode" onchange="calcRoute();">
+			<option value="DRIVING">Voiture</option>
+			<option value="WALKING">Walking</option>
+			<option value="BICYCLING">Velo</option>
+			<option value="TRANSIT">Transit</option>
+		</select> 
+		<form id="mode" onchange="calcRoute();">
+			Latitude: <input type="text" name="latEntre"><br>
+			Last name: <input type="text" name="lonEntre"><br>
+			<input type="submit" value="Submit">
+		</form> -->
+		<div id="map1" class="map"></div>
+		
+    </div>
+		
 	</div>
 	<div class="cacher">
 		<p>Test</p>
@@ -22,9 +35,7 @@
 		</p>
 	</div>
 
-
-		<!-- Css freestyle pour l'instant -->
-		<style>
+<style>
 .map {
 	min-width: 220px;
 	min-height: 470px;

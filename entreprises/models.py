@@ -14,8 +14,8 @@ class Entreprise(models.Model,):
     ville      = models.CharField(max_length= 50)
     pays       = models.CharField(max_length= 30)
     telephone  = models.CharField(max_length= 20)
-    latitude   = models.DecimalField(max_digits=13, decimal_places=10)
-    longitude  = models.DecimalField(max_digits=13, decimal_places=10)
+    latitude   = models.FloatField()
+    longitude  = models.FloatField()
 
     def __str__(self):
         return self.nom
