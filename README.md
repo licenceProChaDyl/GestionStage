@@ -16,11 +16,11 @@
 
 ## 2. Liste des entreprises
 
-![alt tag](documentation/version2/img/accueil.png)
+![alt tag](documentation/img/accueil.png)
 
 ## 3. Voir une entreprise
 
-![alt tag](documentation/version2/img/detailEntr.png)
+![alt tag](documentation/img/detailEntr.png)
 
 ### 3.2 Geolocalisation de cette entreprise
 
@@ -38,12 +38,12 @@ Remarque :
 
 On a obligé la saisie de tous les champs.
 
-![alt tag](documentation/version2/img/ajoutEntr.png)
+![alt tag](documentation/img/ajoutEntr.png)
 
 ## 5. Modifier les données d'une entreprise
 
-![alt tag](documentation/version2/img/editEntr.png)
+![alt tag](documentation/img/editEntr.png)
 
 ## 6. Supprimer une entreprise
 
-![alt tag](documentation/version2/img/supprValid.png)
+![alt tag](documentation/img/supprValid.png)
